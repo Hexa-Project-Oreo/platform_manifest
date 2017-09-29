@@ -557,7 +557,10 @@
   <project path="system/core" name="Hexa-Project/platform_system_core" groups="pdk" remote="github" revision="oreo" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
-  <project path="system/hardware/interfaces" name="platform/system/hardware/interfaces" groups="pdk" />
+  <!-- NFC + HAL Fix -->
+  <project path="system/hardware/interfaces" name="moepda/platform_hardware_interfaces" groups="pdk" remote="github" revision="o8x"/>
+  <project path="system/nfc" name="moepda/platform_system_nfc" groups="pdk" remote="github" revision="o8x" />
+  <!-- End of NFC + HAL Fix -->
   <project path="system/hwservicemanager" name="platform/system/hwservicemanager" groups="pdk" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
   <project path="system/libfmq" name="platform/system/libfmq" groups="pdk" />
@@ -567,7 +570,6 @@
   <project path="system/libvintf" name="platform/system/libvintf" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
-  <project path="system/nfc" name="platform/system/nfc" groups="pdk" />
   <project path="system/nvram" name="platform/system/nvram" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
   <project path="system/sepolicy" name="platform/system/sepolicy" groups="pdk" />
