@@ -7,11 +7,12 @@
 		   
   <remote  name="github"
            fetch="https://github.com/" />
-		   
-  <default revision="refs/tags/android-8.0.0_r4"
+		  
+  <default revision="refs/tags/android-8.0.0_r12"
            remote="aosp"
            sync-j="4" />
 
+  <!-- Hexa-Project Changes -->
   <project path="build/make" name="Hexa-Project/platform_build" groups="pdk" remote="github" revision="oreo">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -21,6 +22,18 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
+  <project path="frameworks/base" name="Hexa-Project/platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="github" revision="oreo"/>
+  <project path="hardware/ril" name="Hexa-Project/platform_hardware_ril" groups="pdk" remote="github" revision="oreo" />
+  <project path="packages/apps/DeskClock" name="moepda/platform_packages_apps_DeskClock" groups="pdk-fs" remote="github" revision="o8x" />
+  <project path="packages/apps/Eleven" name="LineageOS/android_packages_apps_Eleven" remote="github" revision="lineage-15.0"/>
+  <project path="system/core" name="Hexa-Project/platform_system_core" groups="pdk" remote="github" revision="oreo" />
+  <!-- NFC + HAL Fix -->
+  <project path="system/hardware/interfaces" name="moepda/platform_hardware_interfaces" groups="pdk" remote="github" revision="o8x"/>
+  <project path="system/nfc" name="moepda/platform_system_nfc" groups="pdk" remote="github" revision="o8x" />
+  <!-- End of NFC + HAL Fix -->
+  <!-- End of Hexa-Project Changes -->
+  
+  <!-- AOSP -->
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" />
   <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" >
@@ -339,7 +352,6 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="Hexa-Project/platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="github" revision="oreo"/>
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -412,7 +424,6 @@
   <project path="hardware/qcom/msm8x09" name="platform/hardware/qcom/msm8x09" groups="qcom_msm8x09" />
   <project path="hardware/qcom/power" name="platform/hardware/qcom/power" groups="qcom,pdk" />
   <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan,pdk" />
-  <project path="hardware/ril" name="Hexa-Project/platform_hardware_ril" groups="pdk" remote="github" revision="oreo" />
   <project path="kernel/tests" name="kernel/tests" />
   <project path="libcore" name="platform/libcore" groups="pdk" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" />
@@ -425,7 +436,6 @@
   <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" groups="pdk-fs" />
-  <project path="packages/apps/DeskClock" name="moepda/platform_packages_apps_DeskClock" groups="pdk-fs" remote="github" revision="o8x" />
   <project path="packages/apps/DevCamera" name="platform/packages/apps/DevCamera" groups="pdk" />
   <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" groups="pdk-fs" />
   <project path="packages/apps/DocumentsUI" name="platform/packages/apps/DocumentsUI" groups="pdk-cw-fs,pdk-fs" />
@@ -441,7 +451,6 @@
   <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" groups="pdk-fs" />
   <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" groups="pdk-fs" />
   <project path="packages/apps/Messaging" name="platform/packages/apps/Messaging" groups="pdk-fs" />
-  <project path="packages/apps/Eleven" name="LineageOS/android_packages_apps_Eleven" remote="github" revision="lineage-15.0"/>
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" groups="pdk-fs" />
   <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" groups="apps_nfc,pdk-fs" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" groups="pdk-fs" />
@@ -554,13 +563,8 @@
   <project path="system/connectivity/wificond" name="platform/system/connectivity/wificond" groups="pdk" />
   <project path="system/connectivity/wifilogd" name="platform/system/connectivity/wifilogd" groups="pdk" />
   <project path="system/chre" name="platform/system/chre" groups="pdk" />
-  <project path="system/core" name="Hexa-Project/platform_system_core" groups="pdk" remote="github" revision="oreo" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
-  <!-- NFC + HAL Fix -->
-  <project path="system/hardware/interfaces" name="moepda/platform_hardware_interfaces" groups="pdk" remote="github" revision="o8x"/>
-  <project path="system/nfc" name="moepda/platform_system_nfc" groups="pdk" remote="github" revision="o8x" />
-  <!-- End of NFC + HAL Fix -->
   <project path="system/hwservicemanager" name="platform/system/hwservicemanager" groups="pdk" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
   <project path="system/libfmq" name="platform/system/libfmq" groups="pdk" />
