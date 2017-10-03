@@ -27,10 +27,9 @@
   <project path="packages/apps/DeskClock" name="moepda/platform_packages_apps_DeskClock" groups="pdk-fs" remote="github" revision="o8x" />
   <project path="packages/apps/Eleven" name="LineageOS/android_packages_apps_Eleven" remote="github" revision="lineage-15.0"/>
   <project path="system/core" name="Hexa-Project/platform_system_core" groups="pdk" remote="github" revision="oreo" />
-  <!-- NFC + HAL Fix -->
   <project path="hardware/interfaces" name="moepda/platform_hardware_interfaces" groups="pdk" remote="github" revision="o8x"/>
   <project path="system/nfc" name="moepda/platform_system_nfc" groups="pdk" remote="github" revision="o8x" />
-  <!-- End of NFC + HAL Fix -->
+  <project path="packages/apps/HEXASettings" name="Hexa-Project/packages_apps_HEXASettings" remote="github" revision="oreo" />
   <!-- End of Hexa-Project Changes -->
   
   <!-- AOSP -->
