@@ -31,6 +31,7 @@
   <project path="system/nfc" name="moepda/platform_system_nfc" groups="pdk" remote="github" revision="o8x" />
   <project path="packages/apps/HEXASettings" name="Hexa-Project/packages_apps_HEXASettings" remote="github" revision="oreo" />
   <project path="vendor/hexa" name="Hexa-Project/platform_vendor_hexa" remote="github" revision="oreo" />
+  <project path="packages/apps/Settings" name="Hexa-Project/platform_packages_apps_Settings" groups="pdk-fs" remote="github" revision="oreo" />
   <!-- End of Hexa-Project Changes -->
   
   <!-- AOSP -->
@@ -461,7 +462,6 @@
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" groups="pdk-fs" />
   <project path="packages/apps/RetailDemo" name="platform/packages/apps/RetailDemo" groups="pdk-fs" />
   <project path="packages/apps/SafetyRegulatoryInfo" name="platform/packages/apps/SafetyRegulatoryInfo" groups="pdk-fs" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" groups="pdk-fs" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" groups="pdk-fs" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" groups="pdk-fs" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" groups="pdk-fs" />
